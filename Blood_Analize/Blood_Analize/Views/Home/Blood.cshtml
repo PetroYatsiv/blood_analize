@@ -1,0 +1,271 @@
+﻿
+@{
+    ViewBag.Title = "Біохімічний аналіз крові";
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+<br/>
+
+<form action="#analizform" id="contact-form" method="POST">
+
+        <div class="container">
+            <select class="selectpicker" name="gender">
+                <option value="Male">Чоловік</option>
+                <option value="Female">Жінка</option>
+            </select>
+            
+            <input type="text" name="age" placeholder="* Вік:" value="" />
+            
+            <select name="agetype">
+                <option value="year">Років</option>
+                <option value="month">Місяців (Для дитини до року)</option>
+                <option value="day">Днів (Для дитини до місяця)</option>
+            </select>
+           
+        </div>
+    
+    <br clear="all" />
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th width="46%">Показник</th>
+            <th width="10%">Значення</th>
+            <th width="27%">Одиниці</th>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Білки</h4></td>
+        </tr>
+        <tr>
+            <td>Альбумін</td>
+            <td><input type="text" value="" name="albumin"></td>
+            <td>г/л</td>
+        </tr>
+        <tr>
+            <td>Загальний білок</td>
+            <td><input type="text" value="" name="obshchiy_belok"></td>
+            <td>г/л</td>
+        </tr>
+        <tr>
+            <td>С-реактивний білок</td>
+            <td><input type="text" value="" name="sreaktivnyy_belok"></td>
+            <td>мг/л</td>
+        </tr>
+        <tr>
+            <td>Міоглобін</td>
+            <td><input type="text" value="" name="mioglobin"></td>
+            <td>мкг/л</td>
+        </tr>
+        <tr>
+            <td>Трансферин</td>
+            <td><input type="text" value="" name="transferrin"></td>
+            <td>г/л</td>
+        </tr>
+        <tr>
+            <td>Феритин</td>
+            <td><input type="text" value="" name="ferritin"></td>
+            <td>мкг/л</td>
+        </tr>
+        <tr>
+            <td>Латентна залізозв'язуча здатність сироватки (ЛЗСС)</td>
+            <td><input type="text" value="" name="lzhss"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Загальна залізозв'язуча здатність сироватки (ЗЗСС)</td>
+            <td><input type="text" value="" name="ozhss"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Ферменти</h4></td>
+        </tr>
+        <tr>
+            <td>АлАТ (аланінамінотрансфераза)</td>
+            <td><input type="text" value="" name="alat"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>АсАТ (аспартатамінотрансфераза)</td>
+            <td><input type="text" value="" name="asat"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>ГГТ (гамма-глутамілтрансфераза)</td>
+            <td><input type="text" value="" name="ggt"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>ЛДГ (Лактатдегідрогеназа)</td>
+            <td><input type="text" value="" name="ldg"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Альфа-амілаза (діастаза)</td>
+            <td><input type="text" value="" name="alfa_amilaza"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Амілаза панкреатична</td>
+            <td><input type="text" value="" name="amilaza_pankreaticheskaya"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Креатинкіназа</td>
+            <td><input type="text" value="" name="kreatinkinaza"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Креатинкіназа МВ</td>
+            <td><input type="text" value="" name="kreatinkinaza_mv"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Лужна фосфатаза</td>
+            <td><input type="text" value="" name="shchelochnaya_fosfataza"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Ліпаза</td>
+            <td><input type="text" value="" name="lipaza"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td>Холінестерази</td>
+            <td><input type="text" value="" name="kholinesteraza"></td>
+            <td>Од/л</td>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Ліпід</h4></td>
+        </tr>
+        <tr>
+            <td>Загальний холестерол</td>
+            <td><input type="text" value="" name="obshchiy_kholesterol"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Ліпопротеїди дуже низької щільності (ЛПДНЩ)</td>
+            <td><input type="text" value="" name="lponp"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Ліпопротеїди низької щільності (ЛПНЩ), β-холестерин</td>
+            <td><input type="text" value="" name="lpnp"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Ліпопротеїди високої щільності (ЛПВЩ), α-холестерин</td>
+            <td><input type="text" value="" name="lpvp"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Тригліцериди</td>
+            <td><input type="text" value="" name="triglitseridy"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Вуглеводи</h4></td>
+        </tr>
+        <tr>
+            <td>Глюкоза</td>
+            <td><input type="text" value="" name="glyukoza"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Фруктозамін</td>
+            <td><input type="text" value="" name="fruktozamin"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td class="colspan" colspan="3"><h4>Пігменти</h4></td>
+        </tr>
+        <tr>
+            <td>Білірубін загальний</td>
+            <td><input type="text" value="" name="bilirubin_obshchiy"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Білірубін прямий (пов'язаний, кон'югований)</td>
+            <td><input type="text" value="" name="bilirubin_pryamoy"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Білірубін непрямий (вільний)</td>
+            <td><input type="text" value="" name="bilirubin_nepryamoy"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Низькомолекулярні азотисті речовини</h4></td>
+        </tr>
+        <tr>
+            <td>Креатинин</td>
+            <td><input type="text" value="" name="kreatinin"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Мочовая кислота</td>
+            <td><input type="text" value="" name="mochevaya_kislota"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Мочовина</td>
+            <td><input type="text" value="" name="mochevina"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td class="colspan danger" colspan="3"><h4>Неорганічні речовини і вітаміни</h4></td>
+        </tr>
+        <tr>
+            <td>Сивороточне залізо</td>
+            <td><input type="text" value="" name="syvorotochnoye_zhelezo"></td>
+            <td>мкмоль/л</td>
+        </tr>
+        <tr>
+            <td>Калій</td>
+            <td><input type="text" value="" name="kaliy"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Кальцій загальний</td>
+            <td><input type="text" value="" name="kaltsiy"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Натрій</td>
+            <td><input type="text" value="" name="natriy"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Хлор</td>
+            <td><input type="text" value="" name="khlor"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Магній</td>
+            <td><input type="text" value="" name="magniy"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Фосфор</td>
+            <td><input type="text" value="" name="fosfor"></td>
+            <td>ммоль/л</td>
+        </tr>
+        <tr>
+            <td>Фолієва кислота</td>
+            <td><input type="text" value="" name="foliyevaya_kislota"></td>
+            <td>нг/мл</td>
+        </tr>
+        <tr>
+            <td>Вітамін В12</td>
+            <td><input type="text" value="" name="vitamin_b12"></td>
+            <td>нг/мл</td>
+        </tr>
+        <tr>
+            <td colspan="3"><input name="agreement" id="agreement" type="checkbox" class="css-checkbox">
+                <label for="agreement" class="css-label"><span></span><i>
+                    Я погоджуюсь із тим, що адміністрація сайту не несе відповідальності за можливі негативні наслідки,
+                    в результаті самостійного розшифрування аналізів і призначення лікування чи бездіяльності.
+                    Я розумію, що результати розшифрування аналізів несуть тільки інформаційних характер та не 
+                    являються діагнозом і не замінюють очної консультації лікаря.
+                </i></label></td>
+        </tr>
+    </table>
+    <input class="btn-success btn-lg" type="button" value="Розшифрувати біохімічний аналіз крові" >
+</form>
